@@ -18,6 +18,9 @@
 
         <template v-slot:tableRows>
           <tableTrow>
+            <td class="py-5 px-6 text-center">
+              <p class="rounded-md inline font-normal">Messi</p>
+            </td>
             <td class="py-5 px-6 text-center text-black">
               <p class="bg-white rounded-md inline px-4 py-2">93</p>
             </td>
@@ -69,13 +72,7 @@
                 85
               </p>
             </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                85
-              </p>
-            </td>
+
             <td class="py-5 px-2 text-center text-white">
               <p class="bg-black rounded-md inline px-4 py-2">M/L</p>
             </td>
