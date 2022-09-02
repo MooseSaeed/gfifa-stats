@@ -16,33 +16,64 @@
           <tableThead tHead="WR" />
         </template>
 
-        <tbody class="text-sm font-light">
-          <tr
-            class="bg-neutral-800 hover:bg-gray-100 hover:text-black transition-colors"
-          >
-            <td class="py-3 px-6 text-center whitespace-nowrap">
-              <p class="">Name</p>
+        <template v-slot:tableRows>
+          <tableTrow>
+            <td class="py-5 px-6 text-center text-black">
+              <p class="bg-white rounded-md inline px-4 py-2">93</p>
             </td>
-            <td class="py-3 px-6 text-center">
-              <p class="">93</p>
+            <td class="py-5 px-2 text-center text-white">
+              <p class="bg-black rounded-md inline px-4 py-2">RW</p>
             </td>
-            <td class="py-3 px-6 text-center">
-              <p class="">Stuff</p>
+            <td class="py-5 px-2 text-center text-white">
+              <p class="bg-black rounded-md inline px-4 py-2">RW</p>
             </td>
-            <td class="py-3 px-6 text-center">
-              <p class="">Stuff</p>
+            <td class="py-5 px-1 text-center text-white">
+              <p
+                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+              >
+                85
+              </p>
             </td>
-            <td class="py-3 px-6 text-center">
-              <p class="">Stuff</p>
+            <td class="py-5 px-1 text-center text-white">
+              <p
+                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+              >
+                85
+              </p>
             </td>
-            <td class="py-3 px-6 text-center">
-              <p class="">Stuff</p>
+            <td class="py-5 px-1 text-center text-white">
+              <p
+                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+              >
+                85
+              </p>
             </td>
-            <td class="py-3 px-6 text-center">
-              <p class="">Stuff</p>
+            <td class="py-5 px-1 text-center text-white">
+              <p
+                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+              >
+                85
+              </p>
             </td>
-          </tr>
-        </tbody>
+            <td class="py-5 px-1 text-center text-white">
+              <p
+                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+              >
+                85
+              </p>
+            </td>
+            <td class="py-5 px-1 text-center text-white">
+              <p
+                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+              >
+                85
+              </p>
+            </td>
+            <td class="py-5 px-2 text-center text-white">
+              <p class="bg-black rounded-md inline px-4 py-2">M/L</p>
+            </td>
+          </tableTrow>
+        </template>
       </tableTlayout>
     </div>
   </div>
