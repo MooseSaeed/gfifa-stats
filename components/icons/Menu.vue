@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5">
+  <div class="bg-neutral-800 p-5">
     <svg
       width="18"
       height="12"
