@@ -3,13 +3,17 @@
     <div class="overflow-x-auto mx-auto py-10 max-w-6xl">
       <tableTlayout>
         <template v-slot:tableHeads>
-          <th class="py-3 px-6 text-center">Name</th>
-          <th class="py-3 px-6 text-center">OVR</th>
-          <th class="py-3 px-6 text-center">POS</th>
-          <th class="py-3 px-6 text-center">Type</th>
-          <th class="py-3 px-6 text-center">PAC</th>
-          <th class="py-3 px-6 text-center">SHO</th>
-          <th class="py-3 px-6 text-center">PAS</th>
+          <tableThead tHead="Name" />
+          <tableThead tHead="OVR" />
+          <tableThead tHead="POS" />
+          <tableThead tHead="Type" />
+          <tableThead tHead="PAC" />
+          <tableThead tHead="SHO" />
+          <tableThead tHead="PAS" />
+          <tableThead tHead="DRI" />
+          <tableThead tHead="DEF" />
+          <tableThead tHead="PHY" />
+          <tableThead tHead="WR" />
         </template>
 
         <tbody class="text-sm font-light">
