@@ -9,6 +9,15 @@ module.exports = {
     `App.{js,ts,vue}`,
     `app.{js,ts,vue}`,
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        neutral: {
+          800: "#262626",
+          900: "#171717",
+        },
+      },
+    },
+  },
   plugins: [],
 };
