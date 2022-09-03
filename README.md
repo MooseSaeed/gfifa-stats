@@ -1,69 +1,49 @@
-# gfifa-stats
+<h1 align="center">Welcome to G-Fifa Stats 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="docs" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="url" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/Moose_Said" target="_blank">
+    <img alt="Twitter: Moose_Said" src="https://img.shields.io/twitter/follow/Moose_Said.svg?style=social" />
+  </a>
+</p>
 
-## Build Setup
+> G-Fifa Stats is a Nuxt 2.15 application that allows the user to check Fifa 22 players statistics and skills.
 
-```bash
-# install dependencies
-$ npm install
+### Demo
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+### ✨ [Demo]()
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+### ⚙️ Built With
 
-# generate static project
-$ npm run generate
-```
+| Used Stack                              |
+| --------------------------------------- |
+| [Nuxt](https://nuxtjs.org/)             |
+| [TailwindCSS](https://tailwindcss.com/) |
+| [Sanity](https://www.sanity.io/)        |
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+### More Info
 
-## Special Directories
+| Content Table (G-Fifa Stats Structure): |
+| --------------------------------------- |
+| [1- Homepage](#chapter-1)               |
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+#### 1- **Homepage**:<a name="chapter-1"></a>
 
-### `assets`
+## Author
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+👤 **Mostafa Said**
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+- Website: https://linktr.ee/moosesaid
+- Twitter: [@Moose_Said](https://twitter.com/Moose_Said)
+- Github: [@MooseSaeed](https://github.com/MooseSaeed)
+- LinkedIn: [@moosesaid](https://linkedin.com/in/moosesaid)
 
-### `components`
+## 📝 License
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+Copyright © 2022 [Mostafa Said](https://github.com/MooseSaeed).<br />
+This project is [MIT](https://github.com/MooseSaeed/Tailwinder/blob/master/LICENSE) licensed.
