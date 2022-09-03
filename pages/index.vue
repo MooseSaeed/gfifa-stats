@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto text-white">
-    <div class="overflow-x-auto mx-auto py-10 max-w-6xl">
+  <div class="container mx-auto text-white py-14">
+    <div class="overflow-x-auto mx-auto max-w-6xl">
       <tableTlayout>
         <template v-slot:tableHeads>
           <tableThead
