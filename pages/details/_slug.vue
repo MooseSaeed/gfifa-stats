@@ -1,11 +1,11 @@
 <template>
-  <div class="flex justify-center items-center h-full">
-    <div v-if="$fetchState.pending">
+  <div>
+    <div class="mx-auto" v-if="$fetchState.pending">
       <iconsSpinnerIcon />
     </div>
     <div v-else="!$fetchState.pending">
       <section
-        class="container flex flex-col lg:flex-row justify-center items-center py-10 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
+        class="flex flex-col lg:flex-row justify-center items-center py-10 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
       >
         <div class="w-48">
           <img :src="$urlFor(playerInfo[0].cardImage.asset._ref).url()" />

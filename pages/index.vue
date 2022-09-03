@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center">
+  <div>
     <div v-if="$fetchState.pending">
       <iconsSpinnerIcon />
     </div>
