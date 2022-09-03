@@ -8,7 +8,10 @@
         class="flex flex-col lg:flex-row justify-center items-center py-10 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
       >
         <div class="w-48">
-          <img :src="$urlFor(playerInfo[0].cardImage.asset._ref).url()" />
+          <img
+            :src="$urlFor(playerInfo[0].cardImage.asset._ref).url()"
+            :alt="playerInfo[0].name + ' Fifa Card'"
+          />
         </div>
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 flex-1 max-w-5xl w-full px-5 mt-10 lg:mt-0"
