@@ -23,7 +23,7 @@
             </td>
             <td class="py-5 px-6 text-center text-black">
               <p class="bg-white rounded-md inline px-4 py-2">
-                {{ getOVR(player.description) }}
+                {{ player.rating }}
               </p>
             </td>
             <td class="py-5 px-2 text-center text-white">
@@ -104,8 +104,10 @@ export default {
   },
   async fetch() {
     try {
-      /* Get me everything about those fifa cards */
-      const query = '*[_type == "fifaCard"]';
+      // Get me everything about those fifa cards
+      // Sort the results highest rating players first and then sort them alphabetical by name
+      const query =
+        "*[_type == 'fifaCard'] | order(rating desc, name) {name, rating, position, statistics, workRatesAttacking, workRatesDefensive}";
       await client.fetch(query).then((allCards) => {
         this.cardsInfo = allCards;
       });
@@ -115,11 +117,6 @@ export default {
     }
   },
   methods: {
-    // OCR is only included in the details so I had to extract it somehow
-    getOVR(fullDescription) {
-      // Get only numbers and remove 22 (text has fifa 22 so it should be removed)
-      return fullDescription.match(/\d/g).join("").replace(/[2]/g, "");
-    },
     // WorkRates are devided to attacking and defense
     getWR(attack, defense) {
       return attack.charAt(0) + "/" + defense.charAt(0);
