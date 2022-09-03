@@ -83,12 +83,16 @@
           :key="index"
         >
           <td class="py-5 px-6 text-center">
-            <p class="rounded-md inline font-normal">{{ player.name }}</p>
+            <NuxtLink :to="'details/' + `${player.slug.current}`">
+              <p
+                class="rounded-md inline font-normal hover:text-green-400 hover:font-semibold hover:underline"
+              >
+                {{ player.name }}
+              </p>
+            </NuxtLink>
           </td>
           <td class="py-5 px-6 text-center text-black">
-            <p
-              class="bg-white group-hover:bg-black group-hover:text-white rounded-md inline px-4 py-2"
-            >
+            <p class="bg-white rounded-md inline px-4 py-2">
               {{ player.rating }}
             </p>
           </td>
@@ -173,8 +177,9 @@ export default {
       // Get me everything about those fifa cards
       // Sort the results highest rating players first and then sort them alphabetical by name
       const query =
-        "*[_type == 'fifaCard'] | order(rating desc, name) {name, rating, position, statistics, workRatesAttacking, workRatesDefensive}";
+        "*[_type == 'fifaCard'] | order(rating desc, name) {name, rating, position, statistics, workRatesAttacking, workRatesDefensive, slug}";
       await client.fetch(query).then((allCards) => {
+        console.log(allCards);
         this.cardsInfo = allCards;
       });
     } catch (error) {
@@ -190,10 +195,8 @@ export default {
     async sortBy(sortType) {
       // Passing sortType as string to complete Sanity query in one function
       try {
-        const query =
-          "*[_type == 'fifaCard'] | order(" +
-          sortType +
-          ") {name, rating, position, statistics, workRatesAttacking, workRatesDefensive}";
+        const query = `*[_type == 'fifaCard'] | order(${sortType}) {name, rating, position, statistics, workRatesAttacking, workRatesDefensive, slug}`;
+
         await client.fetch(query).then((allCards) => {
           this.cardsInfo = allCards;
         });
