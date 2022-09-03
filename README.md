@@ -37,11 +37,13 @@
 ### Big Screens:
 
 `gif`
+
 ![GStats Big Screens](https://i.imgur.com/s5P4vPD.gif)
 
 ### Small Screens:
 
 `gif`
+
 ![GStats Small Screens](https://i.imgur.com/IJhk12n.gif)
 
 ### Responsive design
@@ -73,11 +75,13 @@ The application utilizes Nuxt `head()` method to provide basic dynamic title and
 ### Big Screens:
 
 `gif`
+
 ![GStats details Big Screens](https://i.imgur.com/gXJWqw9.gif)
 
 ### Small Screens
 
 `gif`
+
 ![GStats details small Screens](https://i.imgur.com/vAjvbFA.gif)
 
 ## Author
