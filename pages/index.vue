@@ -72,15 +72,15 @@
                 {{ player.rating }}
               </p>
             </td>
-            <td class="py-5 px-2 text-center text-white">
-              <p class="bg-black rounded-md inline px-4 py-2">
-                {{ player.position }}
-              </p>
+            <td class="text-center text-white">
+              <div class="bg-black rounded-md py-3 w-14 mx-auto">
+                <p>{{ player.position }}</p>
+              </div>
             </td>
-            <td class="py-5 px-2 text-center text-white">
-              <p class="bg-black rounded-md inline px-4 py-2">
-                {{ player.position }}
-              </p>
+            <td class="text-center text-white">
+              <div class="bg-black rounded-md py-3 w-14 mx-auto">
+                <p>{{ player.position }}</p>
+              </div>
             </td>
             <td class="py-5 px-1 text-center text-white">
               <p
@@ -124,13 +124,14 @@
                 {{ player.statistics.physical.average }}
               </p>
             </td>
-
-            <td class="py-5 px-2 text-center text-white">
-              <p class="bg-black rounded-md inline px-4 py-2">
-                {{
-                  getWR(player.workRatesAttacking, player.workRatesDefensive)
-                }}
-              </p>
+            <td class="text-center text-white">
+              <div class="bg-black rounded-md py-3 w-14 mx-auto">
+                <p>
+                  {{
+                    getWR(player.workRatesAttacking, player.workRatesDefensive)
+                  }}
+                </p>
+              </div>
             </td>
           </tableTrow>
         </template>
