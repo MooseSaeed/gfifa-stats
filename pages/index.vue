@@ -1,144 +1,142 @@
 <template>
-  <div class="container mx-auto text-white py-14">
-    <div class="overflow-x-auto mx-auto max-w-6xl">
-      <tableTlayout>
-        <template v-slot:tableHeads>
-          <tableThead
-            tHead="Name"
-            v-on:click.native="sortBy('name')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="OVR"
-            v-on:click.native="sortBy('rating desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="POS"
-            v-on:click.native="sortBy('position')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="Type"
-            v-on:click.native="sortBy('position')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="PAC"
-            v-on:click.native="sortBy('statistics.pace.average desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="SHO"
-            v-on:click.native="sortBy('statistics.shooting.average desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="PAS"
-            v-on:click.native="sortBy('statistics.passing.average desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="DRI"
-            v-on:click.native="sortBy('statistics.dribbling.average desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="DEF"
-            v-on:click.native="sortBy('statistics.defense.average desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="PHY"
-            v-on:click.native="sortBy('statistics.physical.average desc')"
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-          <tableThead
-            tHead="WR"
-            v-on:click.native="
-              sortBy('workRatesAttacking, player.workRatesDefensive')
-            "
-            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
-          />
-        </template>
+  <div class="overflow-x-auto mx-auto max-w-6xl">
+    <tableTlayout>
+      <template v-slot:tableHeads>
+        <tableThead
+          tHead="Name"
+          v-on:click.native="sortBy('name')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="OVR"
+          v-on:click.native="sortBy('rating desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="POS"
+          v-on:click.native="sortBy('position')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="Type"
+          v-on:click.native="sortBy('position')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="PAC"
+          v-on:click.native="sortBy('statistics.pace.average desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="SHO"
+          v-on:click.native="sortBy('statistics.shooting.average desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="PAS"
+          v-on:click.native="sortBy('statistics.passing.average desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="DRI"
+          v-on:click.native="sortBy('statistics.dribbling.average desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="DEF"
+          v-on:click.native="sortBy('statistics.defense.average desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="PHY"
+          v-on:click.native="sortBy('statistics.physical.average desc')"
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+        <tableThead
+          tHead="WR"
+          v-on:click.native="
+            sortBy('workRatesAttacking, player.workRatesDefensive')
+          "
+          class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+        />
+      </template>
 
-        <template v-slot:tableRows>
-          <tableTrow v-for="(player, index) in cardsInfo" :key="index">
-            <td class="py-5 px-6 text-center">
-              <p class="rounded-md inline font-normal">{{ player.name }}</p>
-            </td>
-            <td class="py-5 px-6 text-center text-black">
-              <p
-                class="bg-white group-hover:bg-black group-hover:text-white rounded-md inline px-4 py-2"
-              >
-                {{ player.rating }}
+      <template v-slot:tableRows>
+        <tableTrow v-for="(player, index) in cardsInfo" :key="index">
+          <td class="py-5 px-6 text-center">
+            <p class="rounded-md inline font-normal">{{ player.name }}</p>
+          </td>
+          <td class="py-5 px-6 text-center text-black">
+            <p
+              class="bg-white group-hover:bg-black group-hover:text-white rounded-md inline px-4 py-2"
+            >
+              {{ player.rating }}
+            </p>
+          </td>
+          <td class="text-center text-white">
+            <div class="bg-black rounded-md py-3 w-14 mx-auto">
+              <p>{{ player.position }}</p>
+            </div>
+          </td>
+          <td class="text-center text-white">
+            <div class="bg-black rounded-md py-3 w-14 mx-auto">
+              <p>{{ player.position }}</p>
+            </div>
+          </td>
+          <td class="py-5 px-1 text-center text-white">
+            <p
+              class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+            >
+              {{ player.statistics.pace.average }}
+            </p>
+          </td>
+          <td class="py-5 px-1 text-center text-white">
+            <p
+              class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+            >
+              {{ player.statistics.shooting.average }}
+            </p>
+          </td>
+          <td class="py-5 px-1 text-center text-white">
+            <p
+              class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+            >
+              {{ player.statistics.passing.average }}
+            </p>
+          </td>
+          <td class="py-5 px-1 text-center text-white">
+            <p
+              class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+            >
+              {{ player.statistics.dribbling.average }}
+            </p>
+          </td>
+          <td class="py-5 px-1 text-center text-white">
+            <p
+              class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+            >
+              {{ player.statistics.defense.average }}
+            </p>
+          </td>
+          <td class="py-5 px-1 text-center text-white">
+            <p
+              class="bg-black border-2 border-white rounded-md inline px-5 py-2"
+            >
+              {{ player.statistics.physical.average }}
+            </p>
+          </td>
+          <td class="text-center text-white">
+            <div class="bg-black rounded-md py-3 w-14 mx-auto">
+              <p>
+                {{
+                  getWR(player.workRatesAttacking, player.workRatesDefensive)
+                }}
               </p>
-            </td>
-            <td class="text-center text-white">
-              <div class="bg-black rounded-md py-3 w-14 mx-auto">
-                <p>{{ player.position }}</p>
-              </div>
-            </td>
-            <td class="text-center text-white">
-              <div class="bg-black rounded-md py-3 w-14 mx-auto">
-                <p>{{ player.position }}</p>
-              </div>
-            </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                {{ player.statistics.pace.average }}
-              </p>
-            </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                {{ player.statistics.shooting.average }}
-              </p>
-            </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                {{ player.statistics.passing.average }}
-              </p>
-            </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                {{ player.statistics.dribbling.average }}
-              </p>
-            </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                {{ player.statistics.defense.average }}
-              </p>
-            </td>
-            <td class="py-5 px-1 text-center text-white">
-              <p
-                class="bg-black border-2 border-white rounded-md inline px-5 py-2"
-              >
-                {{ player.statistics.physical.average }}
-              </p>
-            </td>
-            <td class="text-center text-white">
-              <div class="bg-black rounded-md py-3 w-14 mx-auto">
-                <p>
-                  {{
-                    getWR(player.workRatesAttacking, player.workRatesDefensive)
-                  }}
-                </p>
-              </div>
-            </td>
-          </tableTrow>
-        </template>
-      </tableTlayout>
-    </div>
+            </div>
+          </td>
+        </tableTrow>
+      </template>
+    </tableTlayout>
   </div>
 </template>
 
@@ -171,7 +169,7 @@ export default {
     },
     // Sort results according to user prefrences
     async sortBy(sortType) {
-      // Passing sortType as string to complete Sanity query
+      // Passing sortType as string to complete Sanity query in one function
       try {
         const query =
           "*[_type == 'fifaCard'] | order(" +
