@@ -5,12 +5,12 @@
   >
     <div
       :class="{
-        'flex border-t-2 border-b-2 border-white py-2 text-base font-semibold':
+        'flex justify-between border-t-2 border-b-2 border-white py-2 text-base font-semibold':
           !showIcon,
       }"
     >
       <p>{{ tHead }} <iconsSortIcon v-if="showIcon" /></p>
-      <p v-if="!showIcon" class="pl-20">{{ rating }}</p>
+      <p v-if="!showIcon">{{ rating }}</p>
     </div>
   </th>
 </template>
