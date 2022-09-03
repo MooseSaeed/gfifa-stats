@@ -36,7 +36,7 @@
 
 - Big Screens:
 
-  ![GStats Big Screens](https://i.imgur.com/HOZM7oQ.png)
+  ![GStats Big Screens](https://i.imgur.com/s5P4vPD.gif)
 
 - Small Screens:
 
