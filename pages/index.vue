@@ -1,59 +1,70 @@
 <template>
-  <div class="overflow-x-auto mx-auto max-w-6xl">
+  <section class="overflow-x-auto mx-auto max-w-6xl">
     <tableTlayout>
       <template v-slot:tableHeads>
         <tableThead
           tHead="Name"
+          :showIcon="true"
           v-on:click.native="sortBy('name')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="OVR"
+          :showIcon="true"
           v-on:click.native="sortBy('rating desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="POS"
+          :showIcon="true"
           v-on:click.native="sortBy('position')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="Type"
+          :showIcon="true"
           v-on:click.native="sortBy('position')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="PAC"
+          :showIcon="true"
           v-on:click.native="sortBy('statistics.pace.average desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="SHO"
+          :showIcon="true"
           v-on:click.native="sortBy('statistics.shooting.average desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="PAS"
+          :showIcon="true"
           v-on:click.native="sortBy('statistics.passing.average desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="DRI"
+          :showIcon="true"
           v-on:click.native="sortBy('statistics.dribbling.average desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="DEF"
+          :showIcon="true"
           v-on:click.native="sortBy('statistics.defense.average desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="PHY"
+          :showIcon="true"
           v-on:click.native="sortBy('statistics.physical.average desc')"
           class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
         />
         <tableThead
           tHead="WR"
+          :showIcon="true"
           v-on:click.native="
             sortBy('workRatesAttacking, player.workRatesDefensive')
           "
@@ -137,7 +148,7 @@
         </tableTrow>
       </template>
     </tableTlayout>
-  </div>
+  </section>
 </template>
 
 <script>
