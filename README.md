@@ -28,9 +28,29 @@
 
 ## TOC
 
-| G-Fifa Stats Structure |
-| ---------------------- |
-| [Homepage](#Homepage)  |
+- [✨ Demo](#-demo)
+- [⚙️ Built With](#️-built-with)
+- [TOC](#toc)
+- [Homepage:](#homepage)
+  - [Big Screens:](#big-screens)
+  - [Small Screens:](#small-screens)
+  - [Responsive design](#responsive-design)
+  - [Reusable Table Component](#reusable-table-component)
+  - [Dynamic sorting](#dynamic-sorting)
+  - [Dynamic Routing](#dynamic-routing)
+  - [Loading spinner](#loading-spinner)
+  - [SEO](#seo)
+- [Details Page](#details-page)
+  - [Big Screens:](#big-screens-1)
+  - [Small Screens](#small-screens-1)
+  - [Sanity Image Builder](#sanity-image-builder)
+  - [Fully Dynamic Table](#fully-dynamic-table)
+  - [Player Details Component](#player-details-component)
+  - [Dynamic Route](#dynamic-route)
+- [Additional Information](#additional-information)
+- [Build Setup](#build-setup)
+- [Author](#author)
+- [📝 License](#-license)
 
 ## Homepage:
 
@@ -106,8 +126,22 @@ The page is using the route parameter to tailor a query for Sanity JavaScript SD
 ## Additional Information
 
 - Tailwind is integrated with the typeface "Manrope Variable" for the application font.
+- Imported custom colors to Tailwind to match the requested design.
 - The app is using a single default layout file.
 - Sanity JavaScript SDK and Sanity Image Builder are initiated and added to Nuxt as Plugins, exporting the Client and Image Builder method.
+- `projectId` and `dataset` are being fetched from `.env` file because why not.
+
+## Build Setup
+
+Install dependencies:
+
+$ npm install
+
+Serve with hot reload at localhost:3000
+
+$ npm run dev
+
+Don't forget to create .env file that has projectId and dataSet Values
 
 ## Author
 
@@ -120,5 +154,4 @@ The page is using the route parameter to tailor a query for Sanity JavaScript SD
 
 ## 📝 License
 
-Copyright © 2022 [Mostafa Said](https://github.com/MooseSaeed).<br />
-This project is [MIT](https://github.com/MooseSaeed/Tailwinder/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/MooseSaeed/gfifa-stats/blob/master/LICENCE) licensed.
