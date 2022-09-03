@@ -68,7 +68,9 @@
               <p class="rounded-md inline font-normal">{{ player.name }}</p>
             </td>
             <td class="py-5 px-6 text-center text-black">
-              <p class="bg-white rounded-md inline px-4 py-2">
+              <p
+                class="bg-white group-hover:bg-black group-hover:text-white rounded-md inline px-4 py-2"
+              >
                 {{ player.rating }}
               </p>
             </td>
