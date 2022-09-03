@@ -35,8 +35,8 @@
 #### 1- **Homepage**:<a name="chapter-1"></a>
 
 - Big Screens:
-
-![GStats Big Screens](https://i.imgur.com/HOZM7oQ.png)
+  s
+  ![GStats Big Screens](https://i.imgur.com/HOZM7oQ.png)
 
 - Small Screens:
 
