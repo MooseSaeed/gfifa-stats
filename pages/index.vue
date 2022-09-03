@@ -3,17 +3,63 @@
     <div class="overflow-x-auto mx-auto py-10 max-w-6xl">
       <tableTlayout>
         <template v-slot:tableHeads>
-          <tableThead tHead="Name" />
-          <tableThead tHead="OVR" />
-          <tableThead tHead="POS" />
-          <tableThead tHead="Type" />
-          <tableThead tHead="PAC" />
-          <tableThead tHead="SHO" />
-          <tableThead tHead="PAS" />
-          <tableThead tHead="DRI" />
-          <tableThead tHead="DEF" />
-          <tableThead tHead="PHY" />
-          <tableThead tHead="WR" />
+          <tableThead
+            tHead="Name"
+            v-on:click.native="sortBy('name')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="OVR"
+            v-on:click.native="sortBy('rating desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="POS"
+            v-on:click.native="sortBy('position')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="Type"
+            v-on:click.native="sortBy('position')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="PAC"
+            v-on:click.native="sortBy('statistics.pace.average desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="SHO"
+            v-on:click.native="sortBy('statistics.shooting.average desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="PAS"
+            v-on:click.native="sortBy('statistics.passing.average desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="DRI"
+            v-on:click.native="sortBy('statistics.dribbling.average desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="DEF"
+            v-on:click.native="sortBy('statistics.defense.average desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="PHY"
+            v-on:click.native="sortBy('statistics.physical.average desc')"
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
+          <tableThead
+            tHead="WR"
+            v-on:click.native="
+              sortBy('workRatesAttacking, player.workRatesDefensive')
+            "
+            class="cursor-pointer hover:border-white hover:bg-neutral-800 border-transparent border-t-2"
+          />
         </template>
 
         <template v-slot:tableRows>
@@ -111,7 +157,6 @@ export default {
       await client.fetch(query).then((allCards) => {
         this.cardsInfo = allCards;
       });
-      console.log(this.cardsInfo);
     } catch (error) {
       console.log(error);
     }
@@ -120,6 +165,21 @@ export default {
     // WorkRates are devided to attacking and defense
     getWR(attack, defense) {
       return attack.charAt(0) + "/" + defense.charAt(0);
+    },
+    // Sort results according to user prefrences
+    async sortBy(sortType) {
+      // Passing sortType as string to complete Sanity query
+      try {
+        const query =
+          "*[_type == 'fifaCard'] | order(" +
+          sortType +
+          ") {name, rating, position, statistics, workRatesAttacking, workRatesDefensive}";
+        await client.fetch(query).then((allCards) => {
+          this.cardsInfo = allCards;
+        });
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
