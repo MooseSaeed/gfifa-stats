@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-black min-h-screen">
-    <main class="mx-auto">
+  <div class="bg-black">
+    <div class="mx-auto h-full min-h-screen">
       <Navbar />
-      <div class="container mx-auto text-white py-14">
+      <main class="relative h-full container mx-auto text-white py-14">
         <nuxt />
-      </div>
-    </main>
+      </main>
+    </div>
   </div>
 </template>
 
