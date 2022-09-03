@@ -11,6 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      //Variable font
       manrope: ["Manrope"],
     },
     extend: {
