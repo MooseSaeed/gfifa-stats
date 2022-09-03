@@ -6,6 +6,7 @@
     <section
       class="flex flex-col lg:flex-row justify-center items-center py-10 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
     >
+      <!-- Set width accoridng to div width -->
       <div class="w-48">
         <img
           :src="$urlFor(playerInfo[0].cardImage.asset._ref).url()"
@@ -92,6 +93,7 @@ export default {
   data() {
     return {
       playerInfo: {},
+      sanityError: "",
     };
   },
   // Use the slug in the param to query Sanity and fetch the desired player
@@ -104,7 +106,7 @@ export default {
         this.playerInfo = allInfo;
       });
     } catch (error) {
-      console.log(error);
+      this.sanityError = error;
     }
   },
 };

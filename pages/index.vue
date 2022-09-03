@@ -82,7 +82,7 @@
           />
         </template>
         <template v-slot:tableRows>
-          <!-- Loop over players and display result -->
+          <!-- Loop over players and display results -->
           <tableTrow
             :includeBg="true"
             v-for="(player, index) in cardsInfo"
@@ -157,6 +157,7 @@
             </td>
             <td class="text-center text-white">
               <div class="bg-black rounded-md py-3 w-14 mx-auto">
+                <!-- Workrates are devided to two data properties, compine their first letters -->
                 <p>
                   {{
                     getWR(player.workRatesAttacking, player.workRatesDefensive)
@@ -192,6 +193,7 @@ export default {
   data() {
     return {
       cardsInfo: [],
+      sanityError: "",
     };
   },
   async fetch() {
@@ -204,7 +206,7 @@ export default {
         this.cardsInfo = allCards;
       });
     } catch (error) {
-      console.log(error);
+      this.sanityError = error;
     }
   },
   methods: {
@@ -222,7 +224,7 @@ export default {
           this.cardsInfo = allCards;
         });
       } catch (error) {
-        console.log(error);
+        this.sanityError = error;
       }
     },
   },
