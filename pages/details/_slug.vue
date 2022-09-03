@@ -4,7 +4,7 @@
   </div>
   <div v-else="!$fetchState.pending">
     <section
-      class="flex flex-col lg:flex-row justify-center items-center py-10 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
+      class="flex flex-col lg:flex-row justify-center items-center py-10 mx-5 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
     >
       <!-- Set width accoridng to div width -->
       <div class="w-48">
