@@ -55,16 +55,15 @@
           <PlayerDetails name="Strong Foot" :data="playerInfo[0].strongFoot" />
           <PlayerDetails name="Age" :data="playerInfo[0].age" />
           <PlayerDetails name="Height" :data="playerInfo[0].height" />
-          <div class="pr-5 px-5">
-            <h3 class="text-gray-500 text-lg">Height</h3>
-            <p class="mt-4">
-              {{
-                playerInfo[0].workRatesAttacking +
-                "/" +
-                playerInfo[0].workRatesDefensive
-              }}
-            </p>
-          </div>
+          <PlayerDetails
+            class="border-r-0"
+            name="Workrates"
+            :data="
+              playerInfo[0].workRatesAttacking +
+              ' / ' +
+              playerInfo[0].workRatesDefensive
+            "
+          />
         </div>
       </section>
     </div>
