@@ -73,7 +73,11 @@
       </template>
 
       <template v-slot:tableRows>
-        <tableTrow v-for="(player, index) in cardsInfo" :key="index">
+        <tableTrow
+          :includeBg="true"
+          v-for="(player, index) in cardsInfo"
+          :key="index"
+        >
           <td class="py-5 px-6 text-center">
             <p class="rounded-md inline font-normal">{{ player.name }}</p>
           </td>

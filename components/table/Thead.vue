@@ -1,10 +1,17 @@
 <template>
   <th
-    class="py-3 px-6 font-normal text-center whitespace-nowrap"
-    :class="{ 'flex border-t-2 border-b-2 border-white w-max': !showIcon }"
+    class="font-normal text-center whitespace-nowrap"
+    :class="{ 'px-6 py-3': showIcon }"
   >
-    <p>{{ tHead }} <iconsSortIcon v-if="showIcon" /></p>
-    <p v-if="!showIcon" class="pl-14">{{ rating }}</p>
+    <div
+      :class="{
+        'flex border-t-2 border-b-2 border-white py-2 text-base font-semibold':
+          !showIcon,
+      }"
+    >
+      <p>{{ tHead }} <iconsSortIcon v-if="showIcon" /></p>
+      <p v-if="!showIcon" class="pl-20">{{ rating }}</p>
+    </div>
   </th>
 </template>
 
