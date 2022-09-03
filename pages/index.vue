@@ -2,6 +2,9 @@
   <section class="overflow-x-auto mx-auto max-w-6xl">
     <tableTlayout>
       <template v-slot:tableHeads>
+        <!-- Each thead is a sorting button -->
+        <!-- tHead attribute is for thead name -->
+        <!-- Show icon attribute is for sorting icon -->
         <tableThead
           tHead="Name"
           :showIcon="true"
@@ -73,6 +76,7 @@
       </template>
 
       <template v-slot:tableRows>
+        <!-- Loop over players and display result -->
         <tableTrow
           :includeBg="true"
           v-for="(player, index) in cardsInfo"
