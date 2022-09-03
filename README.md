@@ -103,6 +103,12 @@ A simple component that accepts couple of attributes to display the player's dat
 
 The page is using the route parameter to tailor a query for Sanity JavaScript SDK.
 
+## Additional Information
+
+- Tailwind is integrated with the typeface "Manrope Variable" for the application font.
+- The app is using a single default layout file.
+- Sanity JavaScript SDK and Sanity Image Builder are initiated and added to Nuxt as Plugins, exporting the Client and Image Builder method.
+
 ## Author
 
 👤 **Mostafa Said**
