@@ -86,5 +86,32 @@
 <script>
 export default {
   name: "IndexPage",
+  data() {
+    return {
+      cardsInfo: [],
+    };
+  },
+  async fetch() {
+    /* init Sanity client */
+    const sanityClient = require("@sanity/client");
+    /* provide required Gfinity details */
+    const client = sanityClient({
+      projectId: "21fy9g0s",
+      dataset: "production",
+      apiVersion: "2021-03-25",
+      useCdn: true,
+    });
+
+    try {
+      /* Get me everything about those fifa cards */
+      const query = '*[_type == "fifaCard"]';
+      this.cardsInfo = await client.fetch(query).then((allCards) => {
+        return allCards;
+      });
+      console.log(this.cardsInfo);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 </script>
