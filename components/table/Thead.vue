@@ -6,7 +6,7 @@
     <div
       :class="{
         'flex justify-between border-t-2 border-b-2 border-white py-2 text-base font-semibold':
-          !showIcon,
+          showBorders,
       }"
     >
       <p>{{ tHead }} <iconsSortIcon v-if="showIcon" /></p>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props: ["tHead", "showIcon", "rating"],
+  props: ["tHead", "showIcon", "rating", "showBorders"],
   name: "Thead",
 };
 </script>

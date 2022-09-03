@@ -8,7 +8,7 @@
         <img :src="$urlFor(playerInfo[0].cardImage.asset._ref).url()" />
       </div>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 flex-1 max-w-5xl mt-10 lg:mt-0"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 flex-1 max-w-5xl w-full px-5 mt-10 lg:mt-0"
       >
         <div v-for="(stats, index) in playerInfo[0].statistics" :key="index">
           <tableTlayout>
@@ -16,6 +16,7 @@
               <!-- Extract first three letters from the array Key and make it uppercase -->
               <tableThead
                 :tHead="index.substring(0, 3).toUpperCase()"
+                :showBorders="true"
                 :rating="stats.average"
               />
             </template>
@@ -43,9 +44,43 @@
         >
       </h2>
 
-      <div class="my-10 pr-5 border-r-2 border-white w-max">
-        <h3 class="font-semibold text-gray-500 text-lg">Club</h3>
-        <p class="mt-4">FC Barcelona</p>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-2 w-full py-10"
+      >
+        <div class="pr-5 border-r-2 border-gray-500 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">Club</h3>
+          <p class="mt-4">{{ playerInfo[0].club }}</p>
+        </div>
+        <div class="pr-5 border-r-2 border-gray-500 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">League</h3>
+          <p class="mt-4">{{ playerInfo[0].league }}</p>
+        </div>
+        <div class="pr-5 border-r-2 border-gray-500 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">Nation</h3>
+          <p class="mt-4">{{ playerInfo[0].nation }}</p>
+        </div>
+        <div class="pr-5 border-r-2 border-gray-500 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">Strong Foot</h3>
+          <p class="mt-4">{{ playerInfo[0].strongFoot }}</p>
+        </div>
+        <div class="pr-5 border-r-2 border-gray-500 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">Age</h3>
+          <p class="mt-4">{{ playerInfo[0].age }}</p>
+        </div>
+        <div class="pr-5 border-r-2 border-gray-500 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">Height</h3>
+          <p class="mt-4">{{ playerInfo[0].height }}</p>
+        </div>
+        <div class="pr-5 px-5">
+          <h3 class="font-semibold text-gray-500 text-lg">Height</h3>
+          <p class="mt-4">
+            {{
+              playerInfo[0].workRatesAttacking +
+              "/" +
+              playerInfo[0].workRatesDefensive
+            }}
+          </p>
+        </div>
       </div>
     </section>
   </div>
