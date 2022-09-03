@@ -10,6 +10,9 @@ module.exports = {
     `app.{js,ts,vue}`,
   ],
   theme: {
+    fontFamily: {
+      manrope: ["Manrope"],
+    },
     extend: {
       colors: {
         neutral: {

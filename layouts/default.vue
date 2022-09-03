@@ -2,7 +2,9 @@
   <div class="bg-black">
     <div class="mx-auto h-full min-h-screen">
       <Navbar />
-      <main class="relative h-full container mx-auto text-white py-14">
+      <main
+        class="relative h-full container mx-auto text-white py-14 font-manrope"
+      >
         <nuxt />
       </main>
     </div>

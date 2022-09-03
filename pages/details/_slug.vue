@@ -25,7 +25,7 @@
               </template>
               <template v-slot:tableRows>
                 <tableTrow v-for="(stat, statIndex) in stats" :key="statIndex">
-                  <td class="flex justify-between font-semibold py-2">
+                  <td class="flex justify-between py-2">
                     <p class="rounded-md">
                       <!-- Transform first letter to uppercase -->
                       {{ statIndex.replace(/^./, (str) => str.toUpperCase()) }}
@@ -40,7 +40,7 @@
       </section>
       <section class="p-5">
         <h2 class="font-bold text-3xl">
-          Lionel Messi
+          {{ playerInfo[0].name }}
           <span
             class="text-sm text-gray-500 border-b-2 border-dotted border-gray-500"
             >View all cards</span
@@ -56,7 +56,7 @@
           <PlayerDetails name="Age" :data="playerInfo[0].age" />
           <PlayerDetails name="Height" :data="playerInfo[0].height" />
           <div class="pr-5 px-5">
-            <h3 class="font-semibold text-gray-500 text-lg">Height</h3>
+            <h3 class="text-gray-500 text-lg">Height</h3>
             <p class="mt-4">
               {{
                 playerInfo[0].workRatesAttacking +

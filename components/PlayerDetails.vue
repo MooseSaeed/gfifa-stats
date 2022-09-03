@@ -2,7 +2,7 @@
   <div
     class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
   >
-    <h3 class="font-semibold text-gray-500 text-lg">{{ name }}</h3>
+    <h3 class="text-gray-500 text-lg font-semibold">{{ name }}</h3>
     <p class="mt-4">{{ data }}</p>
   </div>
 </template>
