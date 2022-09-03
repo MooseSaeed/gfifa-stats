@@ -175,6 +175,20 @@
 import { client } from "../plugins/sanity.js";
 export default {
   name: "IndexPage",
+  head() {
+    return {
+      // this will show as 'Home | G-Fifa Stats'
+      title: "Home",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Checkout all fifa 22 player's statistics and use this to win every game",
+        },
+      ],
+    };
+  },
   data() {
     return {
       cardsInfo: [],
