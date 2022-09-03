@@ -1,6 +1,8 @@
 <template>
   <div>
-    <section class="flex">
+    <section
+      class="flex py-10 rounded-xl bg-gradient-to-tr from-black via-neutral-900 to-black"
+    >
       <div class="bg-red-300 w-80 h-80 mx-10"></div>
       <div>
         <tableTlayout>
