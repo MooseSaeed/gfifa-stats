@@ -47,42 +47,13 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-2 w-full py-10"
       >
-        <div
-          class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
-        >
-          <h3 class="font-semibold text-gray-500 text-lg">Club</h3>
-          <p class="mt-4">{{ playerInfo[0].club }}</p>
-        </div>
-        <div
-          class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
-        >
-          <h3 class="font-semibold text-gray-500 text-lg">League</h3>
-          <p class="mt-4">{{ playerInfo[0].league }}</p>
-        </div>
-        <div
-          class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
-        >
-          <h3 class="font-semibold text-gray-500 text-lg">Nation</h3>
-          <p class="mt-4">{{ playerInfo[0].nation }}</p>
-        </div>
-        <div
-          class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
-        >
-          <h3 class="font-semibold text-gray-500 text-lg">Strong Foot</h3>
-          <p class="mt-4">{{ playerInfo[0].strongFoot }}</p>
-        </div>
-        <div
-          class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
-        >
-          <h3 class="font-semibold text-gray-500 text-lg">Age</h3>
-          <p class="mt-4">{{ playerInfo[0].age }}</p>
-        </div>
-        <div
-          class="pr-5 border-b-2 pb-4 lg:pb-0 lg:border-r-2 lg:border-b-0 border-gray-500 px-5"
-        >
-          <h3 class="font-semibold text-gray-500 text-lg">Height</h3>
-          <p class="mt-4">{{ playerInfo[0].height }}</p>
-        </div>
+        <PlayerDetails name="Club" :data="playerInfo[0].club" />
+        <PlayerDetails name="League" :data="playerInfo[0].league" />
+        <PlayerDetails name="Nation" :data="playerInfo[0].nation" />
+        <PlayerDetails name="Strong Foot" :data="playerInfo[0].strongFoot" />
+        <PlayerDetails name="Age" :data="playerInfo[0].age" />
+        <PlayerDetails name="Height" :data="playerInfo[0].height" />
+
         <div class="pr-5 px-5">
           <h3 class="font-semibold text-gray-500 text-lg">Height</h3>
           <p class="mt-4">
