@@ -2,8 +2,8 @@ const sanityClient = require("@sanity/client");
 import imageUrlBuilder from "@sanity/image-url";
 
 const client = sanityClient({
-  projectId: "21fy9g0s",
-  dataset: "production",
+  projectId: process.env.PROJECT_ID,
+  dataset: process.env.DATA_SET,
   apiVersion: "2021-03-25",
   useCdn: true,
 });
