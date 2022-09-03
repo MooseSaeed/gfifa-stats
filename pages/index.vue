@@ -83,6 +83,7 @@
           :key="index"
         >
           <td class="py-5 px-6 text-center">
+            <!-- Dynamic link to player details page -->
             <NuxtLink :to="'details/' + `${player.slug.current}`">
               <p
                 class="rounded-md inline font-normal hover:text-green-400 hover:font-semibold hover:underline"
@@ -179,7 +180,6 @@ export default {
       const query =
         "*[_type == 'fifaCard'] | order(rating desc, name) {name, rating, position, statistics, workRatesAttacking, workRatesDefensive, slug}";
       await client.fetch(query).then((allCards) => {
-        console.log(allCards);
         this.cardsInfo = allCards;
       });
     } catch (error) {
