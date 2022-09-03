@@ -36,10 +36,12 @@
 
 ### Big Screens:
 
+`gif`
 ![GStats Big Screens](https://i.imgur.com/s5P4vPD.gif)
 
 ### Small Screens:
 
+`gif`
 ![GStats Small Screens](https://i.imgur.com/IJhk12n.gif)
 
 ### Responsive design
@@ -65,6 +67,18 @@ Application is listening to Nuxt's `fetch()` hook and shows a loading spinner if
 ### SEO
 
 The application utilizes Nuxt `head()` method to provide basic dynamic title and meta tags. Using the `titleTemplate` from `Vue-Meta` in `nuxt.config.js` file, the app name, together with the dynamic page title, will be permanent across all pages.
+
+## Details Page
+
+### Big Screens:
+
+`gif`
+![GStats details Big Screens](https://i.imgur.com/gXJWqw9.gif)
+
+### Small Screens
+
+`gif`
+![GStats details small Screens](https://i.imgur.com/vAjvbFA.gif)
 
 ## Author
 
