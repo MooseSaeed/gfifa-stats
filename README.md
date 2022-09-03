@@ -74,15 +74,34 @@ The application utilizes Nuxt `head()` method to provide basic dynamic title and
 
 ### Big Screens:
 
-`gif`
+![Details Page Bigsreens Image](https://imgur.com/sqrivUa.png)
 
-![GStats details Big Screens](https://i.imgur.com/gXJWqw9.gif)
+[CLICK FOR GIF - GStats Details Big Screens](https://i.imgur.com/gXJWqw9.gif)
 
 ### Small Screens
 
-`gif`
+![Details Page Smallscreens Image](https://imgur.com/FhDtw4P.png)
 
-![GStats details small Screens](https://i.imgur.com/vAjvbFA.gif)
+[CLICK FOR GIF - GStats Details Small Screens](https://i.imgur.com/vAjvbFA.gif)
+
+### Sanity Image Builder
+
+Card image is being fetched and displayed using [Sanity Image Builder](https://www.sanity.io/docs/presenting-images#mY9Be3Ph).
+
+Alt attribute is dynamically changing accoridng to the selected player.
+
+### Fully Dynamic Table
+
+- Same reusable table from homepage is being used.
+- Rather than being hard coded, table headers are dynamically fetched from Sanity and customized to show only the first three characters in uppercase, and each header has its own data as table rows.
+
+### Player Details Component
+
+A simple component that accepts couple of attributes to display the player's data in the footer seciton.
+
+### Dynamic Route
+
+The page is using the route parameter to tailor a query for Sanity JavaScript SDK.
 
 ## Author
 
