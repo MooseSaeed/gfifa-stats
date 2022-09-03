@@ -12,11 +12,11 @@
   </a>
 </p>
 
-> G-Fifa Stats is a Nuxt 2.15 application that allows the user to check Fifa 22 players statistics and skills.
+> G-Fifa Stats is a Nuxt app that allows the user to check Fifa 22 players statistics and skills.
 
-### Demo
+### ✨ Demo
 
-### ✨ [Demo]()
+60 Seconds [Video Demo](https://vimeo.com/manage/videos/746146971)
 
 ### ⚙️ Built With
 
@@ -30,9 +30,17 @@
 
 | Content Table (G-Fifa Stats Structure): |
 | --------------------------------------- |
-| [1- Homepage](#chapter-1)               |
+| [1- Homepage](#Homepage)                |
 
 #### 1- **Homepage**:<a name="chapter-1"></a>
+
+- Big Screens:
+
+![GStats Big Screens](https://i.imgur.com/HOZM7oQ.png)
+
+- Small Screens:
+
+![GStats Small Screens](https://i.imgur.com/IJhk12n.gif)
 
 ## Author
 
