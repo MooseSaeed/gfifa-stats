@@ -130,6 +130,7 @@ The page is using the route parameter to tailor a query for Sanity JavaScript SD
 - The app is using a single default layout file.
 - Sanity JavaScript SDK and Sanity Image Builder are initiated and added to Nuxt as Plugins, exporting the Client and Image Builder method.
 - `projectId` and `dataset` are being fetched from `.env` file because why not.
+- I intended to use `stores` to share the state of the retrieved cards data from Sanity.io, and then pick up the desired card in the details route. However, I believe it is preferable to utilize Sanity's query filters to retrieve a single card and then organize the returned data.
 
 ## Build Setup
 
