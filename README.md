@@ -129,7 +129,7 @@ The page is using the route parameter to tailor a query for Sanity JavaScript SD
 - Imported custom colors to Tailwind to match the requested design.
 - The app is using a single default layout file.
 - Sanity JavaScript SDK and Sanity Image Builder are initiated and added to Nuxt as Plugins, exporting the Client and Image Builder method.
-- `projectId` and `dataset` are being fetched from `.env` file because why not.
+- `projectId` and `dataset` could be fetched from `.env` file because why not. But I choose not to do it just in case someone would like to clone and test the project.
 - I intended to use `stores` to share the state of the retrieved cards data from Sanity.io, and then pick up the desired card in the details route. However, I believe it is preferable to utilize Sanity's query filters to retrieve a single card and then organize the returned data.
 
 ## Build Setup
@@ -141,8 +141,6 @@ $ npm install
 Serve with hot reload at localhost:3000
 
 $ npm run dev
-
-Don't forget to create .env file that has projectId and dataSet Values
 
 ## Author
 
